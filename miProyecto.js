@@ -4,6 +4,9 @@ console.log(nombre)
 
 function presupuestoAlianza() {
     let presupuesto = Number(prompt("ingrese su presupuesto"))
+    while (presupuesto === 0) {
+        let presupuesto = Number(prompt("ingrese un presupuesto valido"))
+    }
     let alianzas = 0
     if (presupuesto < 40000) {
         let alianzas = "de plata y oro"
@@ -17,6 +20,6 @@ function presupuestoAlianza() {
     if (presupuesto > 150000) {
         let alianzas = "de oro y brillateria incluida"
     } 
-    alert ("el tipo de alianzas que se puede fabricar seria de" , {alianzas})
+    alert ("el tipo de alianzas que se puede fabricar seria de" + " " + alianzas)
 }
 presupuestoAlianza ()
